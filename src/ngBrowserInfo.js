@@ -141,6 +141,14 @@
 							return version[1] + '.' + version[2];
 						}
 						break;
+
+					case 'Ubuntu':
+						version = /Ubuntu\/([\.\_\d]+)/.exec(userAgent);
+
+						if (version) {
+							return version[1];
+						}
+						break;
 				}
 				return 'N/A';
 			};
@@ -160,7 +168,9 @@
 				{name: 'Windows ME', regex: /Windows ME/},
 				{name: 'Android', regex: /Android/},
 				{name: 'Open BSD', regex: /OpenBSD/},
+				{name: 'Free BSD', regex: /FreeBSD/},
 				{name: 'Sun OS', regex: /SunOS/},
+				{name: 'Ubuntu', regex: /Ubuntu/},
 				{name: 'Linux', regex: /(Linux|X11)/},
 				{name: 'iOS', regex: /(iPhone|iPad|iPod)/},
 				{name: 'Mac OS X', regex: /Mac OS X/},

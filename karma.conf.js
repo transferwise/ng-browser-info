@@ -20,9 +20,9 @@ module.exports = function(config) {
             suite: 'unit'
         },
         coverageReporter: {
-            type : 'text',
+            type : 'html',
             dir : 'log/',
-            file : 'karma-coverage.txt'
+            file : 'karma-coverage.html'
         },
         preprocessors: {
             '**/src/*.js': 'coverage'
