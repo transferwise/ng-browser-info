@@ -1,1 +1,114 @@
-ngBrowserInfo demo
+<!DOCTYPE html>
+<html lang="en" ng-app="ngBrowserInfoDemo">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>ngBrowserInfo Demo</title>
+
+	<style>
+		body {
+			margin: 0 auto;
+			background-color: #223049;
+			color: #fff;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 300;
+		}
+		main {
+			margin: 0 auto;
+			width: 60%;
+		}
+		h1 {
+			margin: 70px 0;
+			font-size: 40px;
+			font-weight: 100;
+			text-align: center;
+		}
+		@media (max-width: 1000px) {
+			main {
+				width: 90%;
+			}
+			h1 {
+				font-size: 30px;
+			}
+		}
+		table {
+			border-spacing: 5px;
+		}
+		td {
+			vertical-align: top;
+		}
+		td:first-child {
+			padding-right: 30px;
+			color: #00c6ff;
+		}
+		.debug {
+			color: grey!important;
+		}
+		footer {
+			height: 80px;
+			padding-top: 50px;
+			text-align: right;
+		}
+		a {
+			color: #3EC9A7;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #F2E8C4;
+		}
+	</style>
+</head>
+<body ng-controller="DemoController">
+
+<main>
+	<h1>ngBrowserInfo Demo</h1>
+
+	<table>
+		<tr ng-repeat="(key, spec) in info">
+			<td>{{key}}</td>
+			<td>{{spec}}</td>
+		</tr>
+		<tr>
+			<td class="debug">Platform</td>
+			<td>{{navigator.platform}}</td>
+		</tr>
+		<tr>
+			<td class="debug">UserAgent</td>
+			<td>{{navigator.userAgent}}</td>
+		</tr>
+	</table>
+
+	<footer><a href="https://github.com/transferwise/ng-browser-info">Check out @GitHub</a></footer>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="src/ngBrowserInfo.js"></script>
+<script>
+	angular.module('ngBrowserInfoDemo', ['ngBrowserInfo']);
+
+	angular.module('ngBrowserInfoDemo').controller('DemoController', [
+		'$scope', '$window', 'browserInfo',
+		function ($scope, $window, browserInfo) {
+
+			$scope.navigator = $window.navigator;
+
+			$scope.info = function () {
+				var specs = browserInfo.giveMeAllYouGot();
+
+				return {
+					mobile: specs.mobile,
+					screenSize: specs.screenSize.width + 'x' + specs.screenSize.height,
+					windowSize: specs.windowSize.width + 'x' + specs.windowSize.height,
+					cookiesEnabled: specs.cookiesEnabled,
+					os: specs.os.name + ' ' + specs.os.version,
+					browser: specs.browser.name + ' ' + specs.browser.version
+				};
+			}();
+		}
+	]);
+</script>
+
+</body>
+</html>
