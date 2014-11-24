@@ -34,7 +34,7 @@ angular.module('your-app').controller('MainCtrl', function($scope, browserInfo) 
 
 ````javascript
 
-// Returns object with width and size properties
+// Returns object with width and height properties
 browserInfo.getScreenSize();
 browserInfo.getWindowSize();
 
