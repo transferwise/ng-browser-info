@@ -1,6 +1,8 @@
 ngBrowserInfo
 ===============
 
+[![Build Status](https://travis-ci.org/transferwise/ng-browser-info.svg?branch=master)](https://travis-ci.org/transferwise/ng-browser-info)
+
 ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser:
 
 * Browser name and version
