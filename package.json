@@ -1,0 +1,17 @@
+{
+  "name": "ngBrowserInfo",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "phantomjs": "latest",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-coverage": "latest"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  }
+}
