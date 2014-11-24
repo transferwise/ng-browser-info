@@ -50,6 +50,10 @@ browserInfo.getBrowserInfo();
 browserInfo.giveMeAllYouGot();
 ````
 
+## Demo
+
+Check it out [here](http://transferwise.github.io/ng-browser-info/)
+
 ## License
 
 [Apache 2.0 License](//github.com/transferwise/ng-browser-info/blob/master/LICENSE)
