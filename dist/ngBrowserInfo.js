@@ -1,7 +1,7 @@
 /**
- * ngBrowserInfo v0.1.0
+ * ngBrowserInfo v0.1.1
  *
- * Copyright 2014 Transferwise
+ * Copyright 2014 Transferwise Ltd
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  *
@@ -110,7 +110,7 @@
 						}
 					}
 				}
-				return 'N/A';
+				return undefined;
 			};
 
 			var getOSVersion = function (osName) {
@@ -141,8 +141,16 @@
 							return version[1] + '.' + version[2];
 						}
 						break;
+
+					case 'Ubuntu':
+						version = /Ubuntu\/([\.\_\d]+)/.exec(userAgent);
+
+						if (version) {
+							return version[1];
+						}
+						break;
 				}
-				return 'N/A';
+				return undefined;
 			};
 
 			var osList = [
@@ -160,7 +168,9 @@
 				{name: 'Windows ME', regex: /Windows ME/},
 				{name: 'Android', regex: /Android/},
 				{name: 'Open BSD', regex: /OpenBSD/},
+				{name: 'Free BSD', regex: /FreeBSD/},
 				{name: 'Sun OS', regex: /SunOS/},
+				{name: 'Ubuntu', regex: /Ubuntu/},
 				{name: 'Linux', regex: /(Linux|X11)/},
 				{name: 'iOS', regex: /(iPhone|iPad|iPod)/},
 				{name: 'Mac OS X', regex: /Mac OS X/},
@@ -219,8 +229,8 @@
 			// TODO maybe there's a way
 			var getUnknownBrowserInfo = function () {
 				return {
-					name: 'N/A',
-					version: 'N/A'
+					name: undefined,
+					version: undefined
 				};
 			};
 

@@ -117,7 +117,7 @@ describe('ngBrowserInfo service', function () {
 		},
 		{
 			browser: {name: 'Firefox', version: '31.0'},
-			os: {name: 'Linux', version: 'N/A'},
+			os: {name: 'Linux', version: undefined},
 			agent: 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0'
 		},
 		{
@@ -132,7 +132,7 @@ describe('ngBrowserInfo service', function () {
 		},
 		{
 			browser: {name: 'Chrome', version: '38.0.2125.122'},
-			os: {name: 'Mac OS X', version: 'N/A'},
+			os: {name: 'Mac OS X', version: undefined},
 			agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36'
 		},
 		{

@@ -1,7 +1,7 @@
 /**
- * ngBrowserInfo v0.1.0
+ * ngBrowserInfo v0.1.1
  *
- * Copyright 2014 Transferwise
+ * Copyright 2014 Transferwise Ltd
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  *
@@ -110,7 +110,7 @@
 						}
 					}
 				}
-				return 'N/A';
+				return undefined;
 			};
 
 			var getOSVersion = function (osName) {
@@ -150,7 +150,7 @@
 						}
 						break;
 				}
-				return 'N/A';
+				return undefined;
 			};
 
 			var osList = [
@@ -229,8 +229,8 @@
 			// TODO maybe there's a way
 			var getUnknownBrowserInfo = function () {
 				return {
-					name: 'N/A',
-					version: 'N/A'
+					name: undefined,
+					version: undefined
 				};
 			};
 
