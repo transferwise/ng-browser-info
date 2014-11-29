@@ -1,5 +1,5 @@
 /**
- * ngBrowserInfo v0.1.1
+ * ngBrowserInfo v0.1.2
  *
  * Copyright 2014 Transferwise Ltd
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,6 +28,7 @@
 					windowSize: this.getWindowSize(),
 					mobile: this.isMobile(),
 					cookiesEnabled: this.areCookiesEnabled(),
+					language: this.getLanguage(),
 					os: this.getOSInfo(),
 					browser: this.getBrowserInfo()
 				};
@@ -59,6 +60,10 @@
 					return $document.cookie.indexOf('test-cookie') !== -1;
 				}
 				return cookieEnabled;
+			};
+
+			this.getLanguage = function () {
+				return navigator.language || navigator.userLanguage;
 			};
 
 			this.getOSInfo = function () {
@@ -110,47 +115,51 @@
 						}
 					}
 				}
-				return undefined;
 			};
 
 			var getOSVersion = function (osName) {
-				var userAgent = $window.navigator.userAgent;
-				var version;
-
 				switch (osName) {
 					case 'Mac OS X':
-						version = /Mac OS X (10[\.\_\d]+)/.exec(userAgent);
-
-						if (version) {
-							return version[1].replace(/_/g, '.');
-						}
-						break;
-
+						return getMacOSVersion();
 					case 'Android':
-						version = /Android ([\.\_\d]+)/.exec(userAgent);
-
-						if (version) {
-							return version[1];
-						}
-						break;
-
+						return getAndroidOSVersion();
 					case 'iOS':
-						version = /OS (\d+)_(\d+)_?(\d+)?/.exec($window.navigator.appVersion);
-
-						if (version) {
-							return version[1] + '.' + version[2];
-						}
-						break;
-
+						return getIOSVersion();
 					case 'Ubuntu':
-						version = /Ubuntu\/([\.\_\d]+)/.exec(userAgent);
-
-						if (version) {
-							return version[1];
-						}
-						break;
+						return getUbuntuOSVersion();
 				}
-				return undefined;
+			};
+
+			var getMacOSVersion = function () {
+				var version = /Mac OS X (10[\.\_\d]+)/.exec($window.navigator.userAgent);
+
+				if (version) {
+					return version[1].replace(/_/g, '.');
+				}
+			};
+
+			var getAndroidOSVersion = function () {
+				var version = /Android ([\.\_\d]+)/.exec($window.navigator.userAgent);
+
+				if (version) {
+					return version[1];
+				}
+			};
+
+			var getIOSVersion = function () {
+				var version = /OS (\d+)_(\d+)_?(\d+)?/.exec($window.navigator.appVersion);
+
+				if (version) {
+					return version[1] + '.' + version[2];
+				}
+			};
+
+			var getUbuntuOSVersion = function () {
+				var version = /Ubuntu\/([\.\_\d]+)/.exec($window.navigator.userAgent);
+
+				if (version) {
+					return version[1];
+				}
 			};
 
 			var osList = [

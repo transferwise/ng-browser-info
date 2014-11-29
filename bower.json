@@ -2,7 +2,7 @@
   "name": "ngBrowserInfo",
   "description": "ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser.",
   "keywords": ["client", "info", "useragent", "navigator", "angularjs", "angular", "os", "browser", "screen", "cookies"],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache 2.0",
   "homepage": "https://github.com/transferwise/ng-browser-info",
   "authors": [

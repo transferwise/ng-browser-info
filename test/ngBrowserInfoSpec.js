@@ -19,6 +19,7 @@ describe('ngBrowserInfo service', function () {
 		expect(info.windowSize).toBeDefined();
 		expect(info.mobile).toBeDefined();
 		expect(info.cookiesEnabled).toBeDefined();
+		expect(info.language).toBeDefined();
 		expect(info.os).toBeDefined();
 		expect(info.browser).toBeDefined();
 	});
@@ -68,6 +69,14 @@ describe('ngBrowserInfo service', function () {
 		it('should create cookie and read it when navigator cookieEnabled is undefined', function () {
 			$window.navigator.cookieEnabled = undefined;
 			expect(service.areCookiesEnabled()).toBeTruthy();
+		});
+	});
+
+	describe('check out browser language', function () {
+
+		it('should return language as a string from navigator', function () {
+			$window.navigator.language = 'en-US';
+			expect(service.getLanguage()).toBe('en-US');
 		});
 	});
 

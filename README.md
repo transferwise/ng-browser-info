@@ -9,6 +9,7 @@ ngBrowserInfo is an AngularJS service that gives you a collection of methods for
 * OS name and version
 * Are cookies enabled
 * Is user using a mobile device
+* Language
 * Screen size
 * Window size
 
@@ -41,6 +42,9 @@ browserInfo.getWindowSize();
 // Returns Boolean
 browserInfo.isMobile();
 browserInfo.areCookiesEnabled();
+
+// Returns String
+browserInfo.getLanguage();
 
 // Returns object with name and version properties
 browserInfo.getOSInfo();
