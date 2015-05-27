@@ -1,7 +1,7 @@
 /**
- * ngBrowserInfo v0.1.2
+ * ngBrowserInfo v0.1.3
  *
- * Copyright 2014 Transferwise Ltd
+ * Copyright 2015 Transferwise Ltd
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  *
@@ -21,6 +21,8 @@
 	angular.module('ngBrowserInfo').service('browserInfo', [
 		'$window', '$document',
 		function ($window, $document) {
+
+			$window.navigator = $window.navigator || {userAgent: '', appVersion: ''};
 
 			this.giveMeAllYouGot = function () {
 				return {
@@ -63,7 +65,7 @@
 			};
 
 			this.getLanguage = function () {
-				return navigator.language || navigator.userLanguage;
+				return $window.navigator.language || $window.navigator.userLanguage;
 			};
 
 			this.getOSInfo = function () {
@@ -131,7 +133,7 @@
 			};
 
 			var getMacOSVersion = function () {
-				var version = /Mac OS X (10[\.\_\d]+)/.exec($window.navigator.userAgent);
+				var version = /Mac OS X (10[\._\d]+)/.exec($window.navigator.userAgent);
 
 				if (version) {
 					return version[1].replace(/_/g, '.');
@@ -139,7 +141,7 @@
 			};
 
 			var getAndroidOSVersion = function () {
-				var version = /Android ([\.\_\d]+)/.exec($window.navigator.userAgent);
+				var version = /Android ([\._\d]+)/.exec($window.navigator.userAgent);
 
 				if (version) {
 					return version[1];
@@ -155,7 +157,7 @@
 			};
 
 			var getUbuntuOSVersion = function () {
-				var version = /Ubuntu\/([\.\_\d]+)/.exec($window.navigator.userAgent);
+				var version = /Ubuntu\/([\._\d]+)/.exec($window.navigator.userAgent);
 
 				if (version) {
 					return version[1];

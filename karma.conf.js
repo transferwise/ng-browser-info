@@ -3,8 +3,8 @@ module.exports = function(config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
-            'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.js',
-            'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-mocks.js',
+            'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js',
+            'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-mocks.js',
             'src/ngBrowserInfo.js',
             'test/ngBrowserInfoSpec.js'
         ],
