@@ -1,5 +1,5 @@
 /**
- * ngBrowserInfo v0.1.3
+ * ngBrowserInfo v0.1.4
  *
  * Copyright 2015 Transferwise Ltd
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,11 +18,13 @@
 
 	angular.module('ngBrowserInfo', []);
 
-	angular.module('ngBrowserInfo').service('browserInfo', [
-		'$window', '$document',
+	angular.module('ngBrowserInfo').service('browserInfo', ['$window', '$document',
 		function ($window, $document) {
 
-			$window.navigator = $window.navigator || {userAgent: '', appVersion: ''};
+			// Fix Karma tests
+			if (!$window.navigator) {
+				$window.navigator = {userAgent: '', appVersion: ''};
+			}
 
 			this.giveMeAllYouGot = function () {
 				return {
