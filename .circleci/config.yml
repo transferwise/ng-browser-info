@@ -20,6 +20,10 @@ jobs:
           command: npm ci
 
       - run:
+          name: Run tests
+          command: npm test
+
+      - run:
           name: Create dist folder
           command: npm run build
 

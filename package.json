@@ -48,7 +48,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "karma start --single-run --port 8294",
     "build": "webpack -p",
     "start": "webpack-dev-server --config webpack.config.dev.js --content-base demo/ --port 3001 --progress"
   }
