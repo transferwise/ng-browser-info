@@ -5,7 +5,7 @@ module.exports = function(config) {
         files: [
             'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js',
             'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-mocks.js',
-            'src/ngBrowserInfo.js',
+            'src/index.js',
             'test/ngBrowserInfoSpec.js'
         ],
         plugins: [

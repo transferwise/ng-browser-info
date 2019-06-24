@@ -20,7 +20,7 @@
   },
   "author": "TransferWise",
   "license": "UNLICENSED",
-  "main": "index.js",
+  "main": "dist/ng-browser-info.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -32,9 +32,21 @@
     "karma-junit-reporter": "^0.2.2",
     "karma-mocha-reporter": "^2.2.1",
     "karma-phantomjs-launcher": "^1.0.4",
-    "phantomjs-prebuilt": "^2.1.16"
+    "phantomjs-prebuilt": "^2.1.16",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.17.1"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "build": "webpack -p",
+    "start": "webpack-dev-server --config webpack.config.dev.js --content-base demo/ --port 3001 --progress"
   }
 }
