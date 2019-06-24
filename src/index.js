@@ -1,1 +1,5 @@
-export { ngBrowserInfo } from 'src/ngBrowserInfo';
+import { ngBrowserInfo } from 'src/ngBrowserInfo';
+
+export {
+  ngBrowserInfo,
+};

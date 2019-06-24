@@ -24,10 +24,5 @@ module.exports = {
       path.resolve(__dirname, './'),
       'node_modules',
     ],
-  },
-  externals: [
-    {
-      angular: 'angular',
-    },
-  ],
+  }
 };

@@ -1,8 +1,9 @@
 const path = require('path');
 
-const distFileName = 'demo';
+const distFileName = 'ng-browser-info.dev';
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'demo'),
