@@ -1,29 +1,40 @@
 {
-  "name": "ng-browser-info",
+  "name": "@transferwise/ng-browser-info",
   "description": "ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser.",
-  "keywords": ["client", "info", "useragent", "navigator", "angularjs", "angular", "os", "browser", "screen", "cookies"],
-  "version": "0.1.6",
-  "license": "Apache 2.0",
+  "keywords": [
+    "client",
+    "info",
+    "useragent",
+    "navigator",
+    "angularjs",
+    "angular",
+    "os",
+    "browser",
+    "screen",
+    "cookies"
+  ],
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/transferwise/ng-browser-info"
   },
-  "author": {
-    "name": "Uku Pattak",
-    "email": "uku.pattak@transferwise.com"
-  },
+  "author": "TransferWise",
+  "license": "UNLICENSED",
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    "karma-jasmine": "latest",
-    "karma-phantomjs-launcher": "latest",
-    "phantomjs": "latest",
+    "jasmine-core": "^2.5.2",
+    "karma": "^4.1.0",
+    "karma-coverage": "latest",
+    "karma-jasmine": "^1.1.0",
     "karma-junit-reporter": "^0.2.2",
-    "karma-coverage": "latest"
+    "karma-mocha-reporter": "^2.2.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "karma start"
   }
 }
