@@ -1,0 +1,31 @@
+{
+  "name": "ngBrowserInfo",
+  "description": "ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser.",
+  "keywords": ["client", "info", "useragent", "navigator", "angularjs", "angular", "os", "browser", "screen", "cookies"],
+  "version": "0.1.4",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/transferwise/ng-browser-info",
+  "authors": [
+    {
+      "name": "Uku Pattak",
+      "email": "uku.pattak@transferwise.com"
+    }
+  ],
+  "main": "./dist/ngBrowserInfo.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/transferwise/ng-browser-info.git"
+  },
+  "dependencies": {
+    "angular": "~1.x.x"
+  },
+  "ignore": [
+    "**/.*",
+    "demo",
+    "log",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -16,7 +16,11 @@ ngBrowserInfo is an AngularJS service that gives you a collection of methods for
 ## Installation
 
 ````
-npm install @transferwise/ng-browser-info
+npm install ng-browser-info
+````
+or
+````
+bower install ng-browser-info
 ````
 
 ## Usage

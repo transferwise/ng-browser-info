@@ -1,55 +1,29 @@
 {
-  "name": "@transferwise/ng-browser-info",
+  "name": "ng-browser-info",
   "description": "ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser.",
-  "keywords": [
-    "client",
-    "info",
-    "useragent",
-    "navigator",
-    "angularjs",
-    "angular",
-    "os",
-    "browser",
-    "screen",
-    "cookies"
-  ],
-  "version": "1.0.0",
+  "keywords": ["client", "info", "useragent", "navigator", "angularjs", "angular", "os", "browser", "screen", "cookies"],
+  "version": "0.1.6",
+  "license": "Apache 2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/transferwise/ng-browser-info"
   },
-  "author": "TransferWise",
-  "license": "UNLICENSED",
-  "main": "dist/ng-browser-info.js",
+  "author": {
+    "name": "Uku Pattak",
+    "email": "uku.pattak@transferwise.com"
+  },
+  "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    "angular": "~1.5.8",
-    "angular-mocks": "~1.5.8",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "body-parser": "^1.17.1",
-    "jasmine-core": "^2.5.2",
-    "karma": "^4.1.0",
-    "karma-babel-preprocessor": "^7.0.0",
-    "karma-coverage": "latest",
-    "karma-jasmine": "^1.1.0",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "phantomjs": "latest",
     "karma-junit-reporter": "^0.2.2",
-    "karma-mocha-reporter": "^2.2.1",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "phantomjs-prebuilt": "^2.1.16",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "karma-coverage": "latest"
   },
   "scripts": {
-    "test": "karma start --single-run --port 8294",
-    "build": "webpack -p",
-    "start": "webpack-dev-server --config webpack.config.dev.js --content-base demo/ --port 3001 --progress"
+    "test": "./node_modules/karma/bin/karma start"
   }
 }
