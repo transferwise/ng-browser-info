@@ -20,6 +20,11 @@
   },
   "author": "TransferWise",
   "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "LICENSE",
+    "REAMDE.md"
+  ],
   "main": "dist/ngBrowserInfo.js",
   "engines": {
     "node": ">=0.10.0"
