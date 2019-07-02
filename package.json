@@ -1,5 +1,5 @@
 {
-  "name": "@transferwise/ng-browser-info",
+  "name": "ng-browser-info",
   "description": "ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser.",
   "keywords": [
     "client",
@@ -20,7 +20,7 @@
   },
   "author": "TransferWise",
   "license": "UNLICENSED",
-  "main": "dist/ng-browser-info.js",
+  "main": "dist/ngBrowserInfo.js",
   "engines": {
     "node": ">=0.10.0"
   },

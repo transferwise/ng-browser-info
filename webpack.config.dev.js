@@ -1,6 +1,6 @@
 const path = require('path');
 
-const distFileName = 'ng-browser-info.dev';
+const distFileName = 'ngBrowserInfo.dev';
 
 module.exports = {
   mode: 'development',
