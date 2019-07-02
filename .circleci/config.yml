@@ -27,14 +27,6 @@ jobs:
           name: Create dist folder
           command: npm run build
 
-      - run:
-          name: Adding @transferwise scope to the package name
-          command: sed  -i '/name/s/\"ng-browser-info\"/\"@transferwise\/ng-browser-info\"/' package.json
-
-      - run:
-          name: package dry run for testing
-          command: npm publish --dry-run
-
       - persist_to_workspace:
           root: .
           paths:
@@ -46,6 +38,10 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/ng-browser-info
+
+      - run:
+          name: Adding @transferwise scope to the package name
+          command: sed  -i '/name/s/\"ng-browser-info\"/\"@transferwise\/ng-browser-info\"/' package.json
 
       - run:
           name: NPM Credentials

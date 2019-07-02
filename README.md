@@ -19,7 +19,10 @@ ngBrowserInfo is an AngularJS service that gives you a collection of methods for
 npm install @transferwise/ng-browser-info
 ````
 
-Note: The package name in package.json is kept as `ng-browser-info` to avoid breaking the existing clients pointing directly to the github repo only. But the pacakge will be published in npm registry as `@transferwise/ng-browser-info` only.
+## Note
+
+The package name in package.json is kept as `ng-browser-info` to avoid breaking the existing clients pointing directly to the github repo only.
+But the pacakge will be published under the name `@transferwise/ng-browser-info` only. Existing clients please update your `package.json` to use the published pacakge.
 
 ## Usage
 
