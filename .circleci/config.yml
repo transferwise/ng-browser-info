@@ -49,7 +49,7 @@ jobs:
 
       - run:
           name: Publish package to NPM
-          command: npm publish --access=restricted
+          command: npm publish --access=public
 
 workflows:
   version: 2
