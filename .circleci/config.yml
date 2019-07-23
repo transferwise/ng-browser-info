@@ -40,10 +40,6 @@ jobs:
           at: ~/ng-browser-info
 
       - run:
-          name: Adding @transferwise scope to the package name
-          command: sed  -i '/name/s/\"ng-browser-info\"/\"@transferwise\/ng-browser-info\"/' package.json
-
-      - run:
           name: NPM Credentials
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_PUBLISH" >> ~/.npmrc
 
@@ -63,4 +59,6 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only:
+                - master
+                - next
