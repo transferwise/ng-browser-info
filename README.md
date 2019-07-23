@@ -3,6 +3,14 @@ ngBrowserInfo
 
 [![Build Status](https://travis-ci.org/transferwise/ng-browser-info.svg?branch=master)](https://travis-ci.org/transferwise/ng-browser-info)
 
+# Master branch is outdated
+
+A long time ago, this repo's CI pipeline was set up with Travis and Bower. We've since switched to Circle and publishing to NPM (@transferwise/ng-browser-info), but we can't upgrade master until some TW dependents stop relying on latest master of this repo on GitHub in their `package.json`s.
+
+For now, the true head is the `next` branch. Once dependents have updated to pull from NPM instead of GitHub, we can subsume `next` back into `master`.
+
+## Intro
+
 ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser:
 
 * Browser name and version
