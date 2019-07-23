@@ -1,8 +1,6 @@
 ngBrowserInfo
 ===============
 
-[![Build Status](https://travis-ci.org/transferwise/ng-browser-info.svg?branch=master)](https://travis-ci.org/transferwise/ng-browser-info)
-
 ngBrowserInfo is an AngularJS service that gives you a collection of methods for knowing more about your client browser:
 
 * Browser name and version
@@ -18,11 +16,6 @@ ngBrowserInfo is an AngularJS service that gives you a collection of methods for
 ````
 npm install @transferwise/ng-browser-info
 ````
-
-## Note
-
-The package name in package.json is kept as `ng-browser-info` to avoid breaking the existing clients pointing directly to the github repo only.
-But the pacakge will be published under the name `@transferwise/ng-browser-info` only. Existing clients please update your `package.json` to use the published pacakge.
 
 ## Usage
 
@@ -66,3 +59,4 @@ Check it out [here](http://transferwise.github.io/ng-browser-info/)
 ## License
 
 [Apache 2.0 License](//github.com/transferwise/ng-browser-info/blob/master/LICENSE)
+
