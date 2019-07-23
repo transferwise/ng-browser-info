@@ -3,16 +3,17 @@ module.exports = function(config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
-            'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js',
-            'http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-mocks.js',
+            './node_modules/angular/angular.min.js',
+            './node_modules/angular-mocks/angular-mocks.js',
             'src/ngBrowserInfo.js',
-            'test/ngBrowserInfoSpec.js'
+            'src/*.spec.js'
         ],
         plugins: [
             'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-coverage'
+            'karma-coverage',
+            'karma-babel-preprocessor'
         ],
         reporters: ['progress', 'junit', 'coverage'],
         junitReporter: {
@@ -25,7 +26,7 @@ module.exports = function(config) {
             file : 'karma-coverage.html'
         },
         preprocessors: {
-            '**/src/*.js': 'coverage'
+            'src/**/*.js': ['babel', 'coverage']
         },
         port: 9876,
         autoWatch: false,
